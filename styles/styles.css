@@ -45,7 +45,7 @@ header {
   color: #303030;
 }
 
-.header-ul > li:last-child a {
+.header-ul>li:last-child a {
   color: #28457b;
   background-color: rgba(232, 239, 254, 0.6);
   border-radius: 20px;
@@ -58,7 +58,7 @@ header {
   font-family: YekanBakhBold;
 }
 
-.header-ul > li:last-child a:hover {
+.header-ul>li:last-child a:hover {
   background-color: #fbf6d9;
 }
 
@@ -147,6 +147,83 @@ header {
   -webkit-animation: fadeInDown 0.25s forwards;
 }
 
+
+#show-more-menu {
+  position: relative;
+
+}
+
+#show-more-menu ul {
+  position: absolute;
+  top: 0;
+  left: -35px;
+  background-color: #fff;
+  border-top: 5px solid #f8e88b;
+  border-radius: 12px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  margin-top: 23px;
+  list-style: none;
+  width: 123px;
+  display: none;
+
+}
+
+#show-more-menu li {
+  margin: 0;
+  padding: 10px 20px;
+  font-size: 0.8rem;
+  color: black;
+}
+
+#show-more-menu li:hover {
+  background-color: rgba(232, 239, 254, 0.6);
+}
+
+#show-product-menu {
+  position: relative;
+}
+
+.product-menu {
+  position: absolute;
+  top: 0;
+  left: -135px;
+  background-color: #fff;
+  display: none;
+  justify-content: flex-start;
+  width: 372px;
+  border-top: 5px solid #f8e88b;
+  border-radius: 12px;
+  padding-top: 5px;
+  margin-top: 23px;
+
+}
+
+.product-menu a p:first-child {
+  color: #000;
+  font-size: 0.95rem;
+}
+
+.product-menu a p:last-child {
+  color: #000;
+  font-size: 0.7rem;
+}
+
+.product-menu a {
+  margin: 10px;
+  display: block;
+  padding: 10px 15px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.product-menu a:hover {
+  background-color: rgba(232, 239, 254, 0.6);
+}
+
 /*-----------------------Navbar-----------------------*/
 
 /*----------------------@Media-------------------------*/
@@ -160,6 +237,7 @@ header {
     -ms-transform: translateY(-100%);
     -o-transform: translateY(-100%);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -167,6 +245,16 @@ header {
     -moz-transform: translateY(0);
     -ms-transform: translateY(0);
     -o-transform: translateY(0);
+  }
+}
+
+@keyframes showUp {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
 
@@ -181,12 +269,15 @@ header {
     width: auto;
     padding: 20px 60px;
   }
+
   .header-ul li:last-child {
     display: none;
   }
+
   .logo {
     margin: 0;
   }
+
   .header-ul li {
     margin: 0 10px;
   }
@@ -196,9 +287,11 @@ header {
   .header-ul {
     display: none;
   }
+
   .hamburger-icon {
     display: block;
   }
+
   header {
     width: auto;
     padding: 10px 8px;
